@@ -292,11 +292,22 @@ function revealScratch() {
     }, 800);
 }
 
+// ======================================
+// FIX: Resize hone par fari thi golden card nahi aayega
+// ======================================
 window.addEventListener("resize", () => {
-    if (document.getElementById("website").style.display !== "none") {
+    // Agar scratch complete nahi hua hai, sirf tabhi canvas ko resize karo
+    if (!scratchCompleted && document.getElementById("website").style.display !== "none") {
         initScratch();
     }
 });
+
+
+// window.addEventListener("resize", () => {
+//     if (document.getElementById("website").style.display !== "none") {
+//         initScratch();
+//     }
+// });
 
 
 // ======================================
