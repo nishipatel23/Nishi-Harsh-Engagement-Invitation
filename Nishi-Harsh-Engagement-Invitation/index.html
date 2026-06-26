@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Nishi ❤️ Harsh | Engagement Invitation</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+</head>
+
+<body>
+
+
+    <div id="entryScreen">
+
+    <div class="door left-door"></div>
+    <div class="door right-door"></div>
+
+    <div class="centerSeal" id="openInvite">
+
+        <div class="sealCircle">
+            NH
+        </div>
+
+        <p>Tap To Open</p>
+
+    </div>
+
+</div>
+
+<div id="website">
+
+    <!-- Your complete invitation website -->
+
+
+
+
+<div class="particles"></div>
+
+<!-- MUSIC -->
+
+<audio id="music" loop preload="auto">
+    <source src="assets/music.mp3" type="audio/mpeg">
+</audio>
+
+<button id="musicBtn">
+<i class="fa-solid fa-music"></i>
+</button>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="overlay">
+
+<h3 class="save">YOU ARE INVITED TO THE  <br>  ENGAGEMENT OF</h3>
+<!-- 
+<h1 class="names">
+Nishi <span>❤️</span> Harsh
+</h1> -->
+
+
+<div class="couple-names">
+
+    <h1 class="name bride">
+        Nishi
+    </h1>
+    <h5 class="parent_name">D/o Mukeshbhai S. Patel <br>
+        Jyotsnaben M. Patel
+    </h5>
+
+    <img src="./assets/rings.png" class="rings" alt="Rings">
+
+    <h1 class="name groom">
+        Harsh
+    </h1>
+      <h5 class="parent_name">S/o Kirtibhai V. Patel <br>
+        Induben K. Patel
+    </h5>
+
+</div>
+
+<div class="divider"></div>
+
+<p class="subtitle">
+Together with our families,<br>
+we invite you to celebrate our Engagement Ceremony.
+</p>
+
+</div>
+
+</section>
+
+<!-- SCRATCH CARD -->
+
+<section class="scratch-section">
+
+<h2>Scratch To Reveal Our Special Day</h2>
+
+<div class="scratch-container">
+
+<div class="hidden-date">
+
+<h1>19 July 2026</h1>
+
+<h3>Engagement Ceremony</h3>
+
+<p>10:00 AM Onwards</p>
+
+</div>
+
+<canvas id="scratchCanvas"></canvas>
+
+</div>
+
+</section>
+
+<!-- COUNTDOWN -->
+
+<section class="countdown">
+
+<h2>Countdown Begins</h2>
+
+<div class="timer">
+
+<div class="box">
+<span id="days">00</span>
+<p>Days</p>
+</div>
+
+<div class="box">
+<span id="hours">00</span>
+<p>Hours</p>
+</div>
+
+<div class="box">
+<span id="minutes">00</span>
+<p>Minutes</p>
+</div>
+
+<div class="box">
+<span id="seconds">00</span>
+<p>Seconds</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- EVENT
+
+<section class="event">
+
+<div class="glass">
+
+<h2>Engagement Ceremony</h2>
+
+<p>🕙 10:00 AM Onwards</p>
+
+</div>
+
+</section> -->
+
+<!-- VENUE -->
+
+<section class="venue">
+
+<div class="glass">
+
+<h2>Venue</h2>
+
+<p>
+
+📍 Dinner Post Restaurant
+
+<br><br>
+
+1st Floor,
+
+Siddhi Vinayak Complex,
+
+200 Feet Ring Road,
+
+Odhav,
+
+Ahmedabad,
+
+Gujarat 382415
+
+</p>
+
+<a href="https://maps.google.com/?q=Dinner+Post+Restaurant+Ahmedabad"
+target="_blank"
+class="mapBtn">
+
+Open in Google Maps
+
+</a>
+
+</div>
+
+</section>
+
+<!-- INVITATION LINES -->
+<section class="invitation-lines-section">
+    <div class="glass invite-card">
+        
+        <div class="card-ornament">✨</div>
+        
+        <h2 class="invite-heading">Bless Our Beginning</h2>
+        
+        <p class="invite-text">
+            A celebration of love, a promise of forever. <br>
+            As we take our first steps towards a beautiful journey together, <br>
+            your presence and blessings will make our special day complete.
+        </p>
+
+        <p class="gujarati-touch">
+            "સ્નેહના આ પાવન બંધનને આપના આશીર્વાદથી વધુ મંગલમય બનાવો."
+        </p>
+        
+        <div class="family-footer">
+            <p class="invitation-from">With love &amp; regards,</p>
+            <h4 class="family-name">Patel Family</h4>
+            <span class="sub-family">All Relatives &amp; Friends</span>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- RSVP -->
+
+<!-- <section class="rsvp">
+
+<h2>We Would Love Your Presence</h2>
+
+<button class="btn">
+RSVP
+</button>
+
+</section> -->
+
+<!-- FOOTER -->
+
+<footer>
+
+<h2>We Can't Wait To Celebrate With You</h2>
+
+<h1>Nishi ❤️ Harsh</h1>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
