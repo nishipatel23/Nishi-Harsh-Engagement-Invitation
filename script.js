@@ -293,12 +293,22 @@ function revealScratch() {
 }
 
 // ======================================
-// FIX: Resize hone par fari thi golden card nahi aayega
+// FIXED: Mobile scroll up-down karne par card wapas nahi aayega
 // ======================================
+let lastWindowWidth = window.innerWidth;
+
 window.addEventListener("resize", () => {
-    // Agar scratch complete nahi hua hai, sirf tabhi canvas ko resize karo
-    if (!scratchCompleted && document.getElementById("website").style.display !== "none") {
-        initScratch();
+    // 1. Agar ek baar scratch ho gaya, toh fari thi initialize nahi karna hai
+    if (scratchCompleted) return;
+
+    // 2. Sirf tabhi check karo jab true width change ho (mobile scroll par width change nahi hoti, sirf height hoti hai)
+    const currentWidth = window.innerWidth;
+    if (currentWidth !== lastWindowWidth) {
+        lastWindowWidth = currentWidth; // Width update karo
+
+        if (document.getElementById("website").style.display !== "none") {
+            initScratch();
+        }
     }
 });
 
