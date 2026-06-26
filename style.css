@@ -1,0 +1,1538 @@
+/* ===========================
+   Google Fonts
+=========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap');
+
+/* ===========================
+   Reset
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:linear-gradient(135deg,#fffdf8,#fdf6e8,#fff);
+
+    color:#444;
+
+    overflow-x:hidden;
+
+}
+
+#website{
+    display:none;
+}
+
+/* ===========================
+   Luxurious Envelope Styles
+=========================== */
+/* ===========================
+   Entry Screen & Envelope Container
+=========================== */
+/* ==========================
+   LUXURY DOOR ENTRY
+========================== */
+/* ==========================
+ENTRY SCREEN
+========================== */
+
+#entryScreen{
+    position:fixed;
+    inset:0;
+    background:#f7f1e6;
+    overflow:hidden;
+    z-index:99999;
+}
+
+/* DOORS */
+
+.door{
+
+    position:absolute;
+    top:0;
+    width:50%;
+    height:100%;
+
+    transition:2s cubic-bezier(.25,.8,.25,1);
+
+    background:linear-gradient(
+        145deg,
+        #e7d4b5,
+        #d6bc8f,
+        #c79b55
+    );
+
+    border:3px solid #c89d54;
+
+    box-shadow:
+    inset 0 0 30px rgba(255,255,255,.3),
+    inset 0 0 80px rgba(0,0,0,.15);
+
+}
+
+/* left */
+
+.left-door{
+
+    left:0;
+
+    transform-origin:left center;
+
+}
+
+/* right */
+
+.right-door{
+
+    right:0;
+
+    transform-origin:right center;
+
+}
+
+/* decorative frame */
+
+.door::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:35px;
+
+    border:2px solid rgba(255,255,255,.35);
+
+    border-radius:10px;
+
+}
+
+/* handle */
+
+.door::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:50%;
+
+    width:18px;
+
+    height:18px;
+
+    border-radius:50%;
+
+    background:#D4AF37;
+
+    transform:translateY(-50%);
+
+    box-shadow:0 0 12px gold;
+
+}
+
+.left-door::after{
+
+    right:35px;
+
+}
+
+.right-door::after{
+
+    left:35px;
+
+}
+
+
+/* Center Seal */
+
+.centerSeal{
+
+    position:absolute;
+
+    left:50%;
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    z-index:10;
+
+    text-align:center;
+
+    cursor:pointer;
+
+}
+
+.sealCircle{
+
+    width:120px;
+    height:120px;
+
+    border-radius:50%;
+
+    background:
+    radial-gradient(circle at 30% 30%,
+    #fff1a6,
+    #d4af37,
+    #8b6a08);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:55px;
+
+    color:white;
+
+    border:5px solid #f6df93;
+
+    box-shadow:
+    0 0 30px rgba(212,175,55,.6);
+
+    animation:pulseSeal 2s infinite;
+
+}
+
+.centerSeal p{
+
+    margin-top:18px;
+
+    font-family:'Cinzel',serif;
+
+    color:#9b7330;
+
+    letter-spacing:3px;
+
+}
+
+@keyframes pulseSeal{
+
+0%{
+transform:scale(1);
+}
+
+50%{
+transform:scale(1.08);
+}
+
+100%{
+transform:scale(1);
+}
+
+}
+
+/* Door Open */
+
+.left-door.open{
+
+    transform:
+    perspective(1200px)
+    rotateY(-115deg);
+
+}
+
+.right-door.open{
+
+    transform:
+    perspective(1200px)
+    rotateY(115deg);
+
+}
+
+.centerSeal.hide{
+
+    transform:
+    translate(-50%,-50%)
+    scale(.4);
+
+    opacity:0;
+
+    transition:.6s;
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.sealCircle{
+
+width:95px;
+height:95px;
+font-size:42px;
+
+}
+
+.centerSeal p{
+
+font-size:14px;
+
+}
+
+}
+
+
+#website{
+    display:none;
+}
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:scale(1.02);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+
+}
+
+
+/* ===========================
+   Hero
+=========================== */
+
+.hero{
+
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    background:
+
+    linear-gradient(rgba(255,255,255,.55),
+
+    rgba(255,255,255,.55)),
+
+    url("assets/background.jpg") center/cover;
+
+    padding-top: 80PX;
+
+
+}
+
+.overlay{
+
+    padding:40px;
+
+    width:90%;
+
+    max-width:800px;
+
+    backdrop-filter:blur(18px);
+
+    background:rgba(255,255,255,.25);
+
+    border:1px solid rgba(255,255,255,.5);
+
+    border-radius:30px;
+
+    box-shadow:0 10px 40px rgba(0,0,0,.15);
+
+}
+
+.save{
+
+    font-family:'Cinzel',serif;
+
+    font-size:26px;
+
+    color:#c49b29;
+
+    letter-spacing:4px;
+
+}
+
+.names{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:80px;
+
+    margin-top:20px;
+
+    color:#b8860b;
+
+    text-shadow:0 0 15px rgba(212,175,55,.5);
+
+}
+
+.names span{
+
+    font-size:65px;
+
+
+    
+}
+.rings{
+
+    width:70px;
+
+    animation:ringGlow 2s infinite alternate;
+
+}
+
+.couple-names{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    margin-top:25px;
+}
+
+.name{
+    font-family:'Great Vibes',cursive;
+    font-size:85px;
+    font-weight:400;
+    color:#b8860b;
+    line-height:1;
+    margin:0;
+    text-shadow:0 0 15px rgba(212,175,55,.35);
+}
+.parent_name{
+    font-family:'Cinzel',serif;
+    font-size:15px;
+    font-weight:400;
+    color:#b8860b;
+    line-height:1;
+    margin:0;
+    text-shadow:0 0 15px rgba(212,175,55,.35);
+}
+.rings{
+    width:90px;
+    margin:18px 0;
+    animation:ringGlow 2s ease-in-out infinite alternate;
+}
+
+.goldDust{
+
+position:fixed;
+
+width:8px;
+
+height:8px;
+
+border-radius:50%;
+
+background:#D4AF37;
+
+pointer-events:none;
+
+z-index:9999;
+
+animation:goldDustFly 2s ease-out forwards;
+
+}
+
+@keyframes goldDustFly{
+
+0%{
+
+transform:translateY(0) scale(1);
+
+opacity:1;
+
+}
+
+100%{
+
+transform:translateY(-180px)
+translateX(80px)
+scale(0);
+
+opacity:0;
+
+}
+
+}
+
+
+
+@keyframes ringGlow{
+    from{
+        transform:scale(1);
+        filter:drop-shadow(0 0 5px gold);
+    }
+    to{
+        transform:scale(1.08);
+        filter:drop-shadow(0 0 18px gold);
+    }
+}
+
+@media(max-width:768px){
+
+    .name{
+        font-size:60px;
+    }
+
+    .rings{
+        width:65px;
+    }
+
+}
+
+.divider{
+
+    width:180px;
+
+    height:2px;
+
+    background:linear-gradient(to right,
+
+    transparent,
+
+    gold,
+
+    transparent);
+
+    margin:20px auto;
+
+}
+
+.subtitle{
+
+    margin-top:20px;
+
+    line-height:1.8;
+
+    font-size:18px;
+
+}
+
+/* ===========================
+Scratch Card
+=========================== */
+
+.scratch-section{
+
+    padding:80px 20px;
+
+    text-align:center;
+
+}
+
+.scratch-section h2{
+
+    font-family:'Cinzel';
+
+    margin-bottom:40px;
+
+    color:#b8860b;
+
+}
+
+.scratch-container{
+
+    position:relative;
+
+    width:340px;
+
+    height:190px;
+
+    margin:auto;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.2);
+
+}
+
+.hidden-date{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:white;
+
+}
+
+.hidden-date h1{
+font-family: 'Cinzel', serif;
+    color:#b8860b;
+
+    font-size:40px;
+
+}
+
+.hidden-date h3{
+font-family: 'Cinzel', serif;
+
+    margin-top:10px;
+
+}
+
+.hidden-date p{
+    font-family: 'Cinzel', serif;
+
+
+    margin-top:10px;
+
+}
+
+#scratchCanvas{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+
+    height:100%;
+
+}
+
+#website{
+display:none;
+}
+
+
+
+/* ===========================
+Countdown
+=========================== */
+
+.countdown{
+
+    padding:80px 20px;
+
+    text-align:center;
+
+}
+
+.timer{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+    margin-top:40px;
+
+}
+
+.box{
+
+    width:130px;
+
+    padding:25px;
+
+    border-radius:20px;
+
+    backdrop-filter:blur(15px);
+
+    background:rgba(255,255,255,.35);
+
+    border:1px solid rgba(255,255,255,.5);
+
+    box-shadow:0 8px 25px rgba(0,0,0,.1);
+
+}
+
+.box span{
+
+    display:block;
+
+    font-size:42px;
+
+    color:#c49b29;
+
+    font-weight:bold;
+
+}
+
+.box p{
+
+    margin-top:10px;
+
+}
+/* Invitation Lines Layout Centering */
+.invitation-lines-section {
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.invite-card {
+    max-width: 650px;
+    padding: 60px 40px;
+    position: relative;
+    border: 1px solid rgba(212, 175, 55, 0.3); /* Soft Gold border */
+}
+
+.card-ornament {
+    font-size: 24px;
+    color: #d4af37;
+    margin-bottom: 15px;
+}
+
+.invite-heading {
+    font-family: 'Cinzel', serif;
+    font-size: 30px;
+    color: #b8860b;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.invite-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Elegant traditional addition */
+.gujarati-touch {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-style: italic;
+    color: #c49b29;
+    background: rgba(255, 253, 248, 0.6);
+    padding: 12px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-bottom: 25px;
+}
+
+/* Family Block Styling */
+.family-footer {
+    margin-top: 15px;
+}
+
+.invitation-from {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #888;
+}
+
+.family-name {
+    font-family: 'Cinzel', serif;
+    font-size: 22px;
+    color: #b8860b;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+.sub-family {
+    font-size: 14px;
+    color: #c49b29;
+    display: block;
+    margin-top: 2px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .invite-card {
+        padding: 40px 20px;
+    }
+    .invite-heading {
+        font-size: 24px;
+    }
+    .invite-text {
+        font-size: 14px;
+    }
+    .gujarati-touch {
+        font-size: 13px;
+    }
+}
+/* ===========================
+Glass Card
+=========================== */
+
+.glass{
+
+    width:90%;
+
+    max-width:700px;
+
+    margin:auto;
+
+    padding:40px;
+
+    border-radius:25px;
+
+    backdrop-filter:blur(18px);
+
+    background:rgba(255,255,255,.35);
+
+    border:1px solid rgba(255,255,255,.5);
+
+    box-shadow:0 10px 30px rgba(0,0,0,.1);
+
+}
+
+/* ===========================
+Venue
+=========================== */
+
+.venue{
+
+    padding:80px 20px;
+
+    text-align:center;
+
+}
+
+.mapBtn{
+
+    display:inline-block;
+
+    margin-top:25px;
+
+    padding:14px 35px;
+
+    border-radius:40px;
+
+    background:linear-gradient(135deg,#D4AF37,#F7E7A1);
+
+    color:white;
+
+    text-decoration:none;
+
+    transition:.4s;
+
+}
+
+.mapBtn:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 10px 25px rgba(212,175,55,.4);
+
+}
+
+/* ===========================
+RSVP
+=========================== */
+
+.rsvp{
+
+    padding:80px 20px;
+
+    text-align:center;
+
+}
+
+.btn{
+
+    margin-top:25px;
+
+    padding:15px 45px;
+
+    border:none;
+
+    border-radius:40px;
+
+    background:linear-gradient(135deg,#D4AF37,#b8860b);
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    transition:.4s;
+
+}
+
+.btn:hover{
+
+    transform:scale(1.08);
+
+    box-shadow:0 15px 35px rgba(212,175,55,.4);
+
+}
+
+/* ===========================
+Footer
+=========================== */
+
+footer{
+
+    padding:80px 20px;
+
+    text-align:center;
+
+    background:#fffaf0;
+
+}
+
+footer h2{
+
+    font-family:'Cinzel';
+
+    color:#b8860b;
+
+}
+
+footer h1{
+
+    margin-top:20px;
+
+    font-family:'Great Vibes';
+
+    font-size:65px;
+
+    color:#c49b29;
+
+}
+
+/* Floating Hearts */
+
+.floating-heart{
+
+position:fixed;
+
+bottom:-40px;
+
+pointer-events:none;
+
+animation:heartFloat linear forwards;
+
+z-index:999;
+
+}
+
+@keyframes heartFloat{
+
+0%{
+
+transform:translateY(0);
+
+opacity:1;
+
+}
+
+100%{
+
+transform:translateY(-120vh);
+
+opacity:0;
+
+}
+
+}
+
+
+/* Flower */
+
+.flower{
+
+position:fixed;
+
+top:-50px;
+
+pointer-events:none;
+
+animation:flowerFall linear forwards;
+
+z-index:999;
+
+}
+
+@keyframes flowerFall{
+
+0%{
+
+transform:translateY(0) rotate(0deg);
+
+}
+
+100%{
+
+transform:translateY(120vh) rotate(360deg);
+
+}
+
+}
+
+
+/* Gold Particle */
+
+.goldParticle{
+
+position:fixed;
+
+width:6px;
+
+height:6px;
+
+background:#D4AF37;
+
+border-radius:50%;
+
+opacity:.7;
+
+pointer-events:none;
+
+animation:goldFloat linear forwards;
+
+}
+
+@keyframes goldFloat{
+
+0%{
+
+transform:translateY(0);
+
+opacity:1;
+
+}
+
+100%{
+
+transform:translateY(-150px);
+
+opacity:0;
+
+}
+
+}
+
+
+/* Scroll Reveal */
+
+.glass,
+.countdown,
+.scratch-section,
+.venue,
+.rsvp,
+footer{
+
+opacity:0;
+
+transform:translateY(80px);
+
+transition:1s;
+
+}
+
+.show{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+
+/* Ripple */
+
+.btn,
+.mapBtn{
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.ripple{
+
+position:absolute;
+
+border-radius:50%;
+
+background:rgba(255,255,255,.45);
+
+transform:scale(0);
+
+animation:ripple .7s linear;
+
+}
+
+@keyframes ripple{
+
+to{
+
+transform:scale(4);
+
+opacity:0;
+
+}
+
+}
+
+/* ===========================
+Responsive
+=========================== */
+
+@media(max-width:768px){
+
+.names{
+
+font-size:55px;
+
+}
+
+.names span{
+
+font-size:45px;
+
+}
+
+.scratch-container{
+
+width:300px;
+
+height:170px;
+
+}
+
+.box{
+
+width:110px;
+
+}
+
+footer h1{
+
+font-size:48px;
+
+}
+
+}
+
+@keyframes floatUp{
+
+0%{
+transform:translateY(0);
+opacity:1;
+}
+
+100%{
+transform:translateY(-120vh);
+opacity:0;
+}
+
+}
+
+#musicBtn{
+    display:none;
+}
+
+
+/* ==========================================
+   RESPONSIVE DESIGN
+========================================== */
+
+/* Tablet */
+
+@media (max-width:992px){
+
+.hero{
+    padding:40px 20px;
+    min-height:100vh;
+}
+
+.overlay,
+.glass{
+    width:95%;
+    padding:30px;
+}
+
+.name{
+    font-size:65px;
+}
+
+.rings{
+    width:70px;
+}
+
+.timer{
+    gap:15px;
+}
+
+.box{
+    width:120px;
+    padding:20px;
+}
+
+footer h1{
+    font-size:55px;
+}
+
+}
+
+
+/* Mobile */
+
+@media (max-width:768px){
+
+body{
+    overflow-x:hidden;
+}
+
+.hero{
+    padding:20px;
+    min-height:100vh;
+}
+
+.overlay{
+
+    width:100%;
+
+    padding:25px 18px;
+
+    border-radius:20px;
+
+}
+
+.save{
+
+    font-size:18px;
+
+    letter-spacing:2px;
+
+}
+
+.subtitle{
+
+    font-size:15px;
+
+    line-height:1.7;
+
+}
+
+.couple-names{
+
+    margin-top:20px;
+
+}
+
+.name{
+
+    font-size:52px;
+
+}
+
+.parent_name{
+
+    font-size:13px;
+
+    line-height:1.8;
+
+}
+
+.rings{
+
+    width:55px;
+
+    margin:12px 0;
+
+}
+
+.scratch-section{
+
+    padding:60px 15px;
+
+}
+
+.scratch-section h2{
+
+    font-size:22px;
+
+}
+
+.scratch-container{
+
+    width:100%;
+
+    max-width:320px;
+
+    height:180px;
+
+}
+
+.hidden-date h1{
+
+    font-size:30px;
+
+}
+
+.hidden-date h3{
+
+    font-size:18px;
+
+}
+
+.hidden-date p{
+
+    font-size:15px;
+
+}
+
+.countdown{
+
+    padding:60px 15px;
+
+}
+
+.timer{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:15px;
+
+}
+
+.box{
+
+    width:100%;
+
+    padding:18px;
+
+}
+
+.box span{
+
+    font-size:34px;
+
+}
+
+.box p{
+
+    font-size:14px;
+
+}
+
+.glass{
+
+    width:100%;
+
+    padding:25px 18px;
+
+    border-radius:18px;
+
+}
+
+.glass h2{
+
+    font-size:24px;
+
+}
+
+.glass p{
+
+    font-size:15px;
+
+    line-height:1.8;
+
+}
+
+.mapBtn{
+
+    width:100%;
+
+    text-align:center;
+
+    padding:14px;
+
+}
+
+.btn{
+
+    width:100%;
+
+    padding:15px;
+
+}
+
+footer{
+
+    padding:60px 20px;
+
+}
+
+footer h2{
+
+    font-size:20px;
+
+}
+
+footer h1{
+
+    font-size:42px;
+
+}
+
+}
+
+
+
+
+/* Small Mobile */
+
+@media (max-width:480px){
+
+.envelope{
+
+    width:320px;
+
+    height:220px;
+
+}
+
+.letter{
+
+    height:145px;
+
+}
+
+.letter p{
+
+    font-size:16px;
+
+}
+
+.seal{
+
+    width:75px;
+
+    height:75px;
+
+}
+
+.logo{
+
+    font-size:26px;
+
+}
+
+.top-monogram-circle{
+
+    width:50px;
+
+    height:50px;
+
+}
+
+.circle-logo{
+
+    font-size:20px;
+
+}
+
+.save{
+
+    font-size:16px;
+
+}
+
+.name{
+
+    font-size:45px;
+
+}
+
+.parent_name{
+
+    font-size:12px;
+
+}
+
+.rings{
+
+    width:48px;
+
+}
+
+.hidden-date h1{
+
+    font-size:24px;
+
+}
+
+.hidden-date h3{
+
+    font-size:16px;
+
+}
+
+.hidden-date p{
+
+    font-size:13px;
+
+}
+
+.box span{
+
+    font-size:28px;
+
+}
+
+footer h1{
+
+    font-size:36px;
+
+}
+
+}
+
+
+
+@keyframes goldFlash {
+    0% {
+        opacity: 0;
+        transform: scale(0.6);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.4);
+    }
+}
+
+@keyframes sparkleBurst {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(var(--x), var(--y)) scale(1.2);
+        opacity: 0;
+    }
+}
