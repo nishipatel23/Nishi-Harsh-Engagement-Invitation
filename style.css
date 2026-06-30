@@ -1203,6 +1203,8 @@ body{
 }
 
 .hero{
+       margin-top: 30px;;
+
     padding:20px;
     min-height:100vh;
 }
@@ -1534,5 +1536,78 @@ footer h1{
     100% {
         transform: translate(var(--x), var(--y)) scale(1.2);
         opacity: 0;
+    }
+}
+
+
+
+.scroll-down{
+    margin-top:30px;
+    text-align:center;
+}
+
+.scroll-down span{
+    display:inline-block;
+    font-size:45px;
+    color:#d4af37;
+    animation:scrollArrow 1.5s infinite;
+}
+
+@keyframes scrollArrow{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(12px);
+    }
+}
+
+/* ===========================
+   Scroll Down Indicator
+=========================== */
+
+.scroll-down{
+    margin-top:35px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    animation:fadeInUp 2s infinite;
+}
+
+.scroll-down p{
+    font-family:'Cinzel',serif;
+    font-size:18px;
+    letter-spacing:3px;
+    color:#b8860b;
+    margin-bottom:8px;
+}
+
+.scroll-down span{
+    font-size:32px;
+    color:#d4af37;
+    animation:bounceArrow 1.6s infinite;
+}
+
+@keyframes bounceArrow{
+    0%,100%{
+        transform:translateY(0);
+        opacity:1;
+    }
+    50%{
+        transform:translateY(12px);
+        opacity:.7;
+    }
+}
+
+@keyframes fadeInUp{
+    0%{
+        opacity:.4;
+    }
+    50%{
+        opacity:1;
+    }
+    100%{
+        opacity:.4;
     }
 }
