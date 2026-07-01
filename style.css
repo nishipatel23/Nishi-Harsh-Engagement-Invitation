@@ -662,7 +662,7 @@ Countdown
 
 }
 
-.box span{
+.box .box_countdown{
 
     display:block;
 
